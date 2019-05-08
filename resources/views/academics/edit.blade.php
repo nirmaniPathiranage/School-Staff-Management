@@ -3,8 +3,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Academic Staff Details</h2>
+            <div class="pull-middle">
+                <h2><center><strong>Edit Academic Staff Details</strong></center></h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('academics.index') }}"> Back</a>
@@ -31,20 +31,14 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Staff ID:</strong>
-                    <input type="text" name="staffid" value="{{$academic->staffid}}"  class="form-control" placeholder="Enter Staff ID">
+                    <font color="blue"><h3><strong>Personal Details</strong></h3></font>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Role ID:</strong>
-                    <select type="text" name="roleid" class="form-control" placeholder="Select Role ID">
-                        <option value = "1" @if($academic->roleid=="1") selected @endif >1</option>
-                        <option value = "2" @if($academic->roleid=="2") selected @endif>2</option>
-                        <option value = "3" @if($academic->roleid=="3") selected @endif>3</option>
-                        <option value = "4" @if($academic->roleid=="4") selected @endif>4</option>
-                    </select>
+                    <strong>Staff ID:</strong>
+                    <input type="text" name="staffid" value="{{$academic->staffid}}"  class="form-control" placeholder="Enter Staff ID">
                 </div>
             </div>
 
@@ -107,6 +101,12 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <font color="blue"><h3><strong>Professional Details</strong></h3></font>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Designation:</strong>
                     <select type="text" name="profession" class="form-control" placeholder="Select your profession">
                         <option value = "Principal" @if($academic->profession=="Principal") selected @endif>Principal</option>
@@ -152,50 +152,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Leave Balance:</strong>
-                    <select type="text" name="leavebalance" class="form-control" placeholder="Select leave balance">
-                        <option value = "1" @if($academic->leavebalance=="1") selected @endif >1</option>
-                        <option value = "2" @if($academic->leavebalance=="2") selected @endif>2</option>
-                        <option value = "3" @if($academic->leavebalance=="3") selected @endif>3</option>
-                        <option value = "4" @if($academic->leavebalance=="4") selected @endif>4</option>
-                        <option value = "5" @if($academic->leavebalance=="5") selected @endif >5</option>
-                        <option value = "6" @if($academic->leavebalance=="6") selected @endif>6</option>
-                        <option value = "7" @if($academic->leavebalance=="7") selected @endif>7</option>
-                        <option value = "8" @if($academic->leavebalance=="8") selected @endif>8</option>
-                        <option value = "9" @if($academic->leavebalance=="9") selected @endif >9</option>
-                        <option value = "10" @if($academic->leavebalance=="10") selected @endif>10</option>
-                        <option value = "11" @if($academic->leavebalance=="11") selected @endif>11</option>
-                        <option value = "12" @if($academic->leavebalance=="12") selected @endif>12</option>
-                        <option value = "13" @if($academic->leavebalance=="13") selected @endif >13</option>
-                        <option value = "14" @if($academic->leavebalance=="14") selected @endif>14</option>
-                        <option value = "15" @if($academic->leavebalance=="15") selected @endif>15</option>
-                        <option value = "16" @if($academic->leavebalance=="16") selected @endif>16</option>
-                        <option value = "17" @if($academic->leavebalance=="17") selected @endif >17</option>
-                        <option value = "18" @if($academic->leavebalance=="18") selected @endif>18</option>
-                        <option value = "19" @if($academic->leavebalance=="19") selected @endif>19</option>
-                        <option value = "20" @if($academic->leavebalance=="20") selected @endif>20</option>
-                        <option value = "21" @if($academic->leavebalance=="21") selected @endif >21</option>
-                        <option value = "22" @if($academic->leavebalance=="22") selected @endif>22</option>
-                        <option value = "23" @if($academic->leavebalance=="23") selected @endif>23</option>
-                        <option value = "24" @if($academic->leavebalance=="24") selected @endif>24</option>
-                        <option value = "25" @if($academic->leavebalance=="25") selected @endif >25</option>
-                        <option value = "26" @if($academic->leavebalance=="26") selected @endif>26</option>
-                        <option value = "27" @if($academic->leavebalance=="27") selected @endif>27</option>
-                        <option value = "28" @if($academic->leavebalance=="28") selected @endif>28</option>
-                        <option value = "29" @if($academic->leavebalance=="29") selected @endif >29</option>
-                        <option value = "30" @if($academic->leavebalance=="30") selected @endif>30</option>
-                        <option value = "31" @if($academic->leavebalance=="31") selected @endif>31</option>
-                        <option value = "32" @if($academic->leavebalance=="32") selected @endif>32</option>
-                        <option value = "33" @if($academic->leavebalance=="33") selected @endif >33</option>
-                        <option value = "34" @if($academic->leavebalance=="34") selected @endif>34</option>
-                        <option value = "35" @if($academic->leavebalance=="35") selected @endif>35</option>
-                        <option value = "36" @if($academic->leavebalance=="36") selected @endif>36</option>
-                        <option value = "37" @if($academic->leavebalance=="37") selected @endif >37</option>
-                        <option value = "38" @if($academic->leavebalance=="38") selected @endif>38</option>
-                        <option value = "39" @if($academic->leavebalance=="39") selected @endif>39</option>
-                        <option value = "40" @if($academic->leavebalance=="40") selected @endif>40</option>
-                        <option value = "41" @if($academic->leavebalance=="41") selected @endif>41</option>
-                    </select>
+                    <font color="blue"><h3><strong>Login Details</strong></h3></font>
                 </div>
             </div>
 
@@ -234,5 +191,5 @@
         </div>
 
     </form>
-
+    </div>
 @endsection

@@ -41,7 +41,6 @@ class AcademicController extends Controller
         $input = request()->validate([
 
             'staffid' => 'required|string|unique:academics,staffid',
-            'roleid' => 'required',
             'fullname' => 'required|string|min:2|max:255',
             'dob' => 'required|date_format:Y-m-d|before:18 years ago',
             'gender' => 'required',
@@ -54,12 +53,13 @@ class AcademicController extends Controller
             'qualifications' => 'required|string|max:255',
             'experience' => 'required|numeric',
             'department' => 'required',
-            'leavebalance' => 'required',
             'username' => 'required|string|min:4|unique:academics,username',
             'passsword' => 'required|string|min:6|unique:academics,passsword',
             'confirmpassword' => 'required|same:passsword',
             'regdate' => 'required|date_format:Y-m-d'
+
         ]);
+
 
 
         $input = request()->all();
@@ -103,7 +103,6 @@ class AcademicController extends Controller
         request()->validate([
 
             'staffid' => 'required|string',
-            'roleid' => 'required',
             'fullname' => 'required|string|min:2|max:255',
             'dob' => 'required|date_format:Y-m-d|before:18 years ago',
             'gender' => 'required',
@@ -116,7 +115,6 @@ class AcademicController extends Controller
             'qualifications' => 'required|string|max:255',
             'experience' => 'required|numeric',
             'department' => 'required',
-            'leavebalance' => 'required',
             'username' => 'required|string|min:4',
             'passsword' => 'required|string|min:6',
             'confirmpassword' => 'required|same:passsword',
@@ -142,4 +140,5 @@ class AcademicController extends Controller
         return redirect()->route('academics.index')
             ->with('success','Academic Staff member details deleted successfully');
     }
+
 }

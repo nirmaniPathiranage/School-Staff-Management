@@ -1,13 +1,13 @@
-@extends('leaverequests.layout')
+@extends('nonleaverequests.layout')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-middle">
-                <h2><center><strong>Display Leave Details</strong></center></h2>
+            <div class="pull-left">
+                <h2> Display Leave Details</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('leaverequests.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('nonleaverequests.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -17,56 +17,56 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Staff ID:</strong>
-                {{ $leaverequest->staffid }}
+                {{ $nonleaverequest->staffid }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Full Name:</strong>
-                {{ $leaverequest->fullname }}
+                {{ $nonleaverequest->fullname }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Designation:</strong>
-                {{ $leaverequest->profession }}
+                {{ $nonleaverequest->profession }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Department:</strong>
-                {{ $leaverequest->department }}
+                {{ $nonleaverequest->department }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>From Date:</strong>
-                {{ $leaverequest->from }}
+                {{ $nonleaverequest->from }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>To Date:</strong>
-                {{ $leaverequest->to}}
+                {{ $nonleaverequest->to}}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Type of Leave:</strong>
-                {{ $leaverequest->type }}
+                {{ $nonleaverequest->type }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Reason to apply leave:</strong>
-                {{ $leaverequest->reason }}
+                {{ $nonleaverequest->reason }}
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Leave Status:</strong>
-            {{ $leaverequest->status }}
+            {{ $nonleaverequest->status }}
         </div>
     </div>
     </div>

@@ -38,18 +38,6 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Role ID:</strong>
-                    <select type="text" name="roleid" class="form-control" placeholder="Select Role ID">
-                        <option value = "1" @if($nonacademic->roleid=="1") selected @endif >1</option>
-                        <option value = "2" @if($nonacademic->roleid=="2") selected @endif>2</option>
-                        <option value = "3" @if($nonacademic->roleid=="3") selected @endif>3</option>
-                        <option value = "4" @if($nonacademic->roleid=="4") selected @endif>4</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
                     <strong>Full Name:</strong>
                     <input type="text" name="fullname" value="{{ $nonacademic->fullname }}" class="form-control" placeholder="Enter Full Name">
                 </div>
@@ -158,55 +146,6 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Leave Balance:</strong>
-                    <select type="text" name="leavebalance" class="form-control" placeholder="Select leave balance">
-                        <option value = "1" @if($nonacademic->leavebalance=="1") selected @endif >1</option>
-                        <option value = "2" @if($nonacademic->leavebalance=="2") selected @endif>2</option>
-                        <option value = "3" @if($nonacademic->leavebalance=="3") selected @endif>3</option>
-                        <option value = "4" @if($nonacademic->leavebalance=="4") selected @endif>4</option>
-                        <option value = "5" @if($nonacademic->leavebalance=="5") selected @endif >5</option>
-                        <option value = "6" @if($nonacademic->leavebalance=="6") selected @endif>6</option>
-                        <option value = "7" @if($nonacademic->leavebalance=="7") selected @endif>7</option>
-                        <option value = "8" @if($nonacademic->leavebalance=="8") selected @endif>8</option>
-                        <option value = "9" @if($nonacademic->leavebalance=="9") selected @endif >9</option>
-                        <option value = "10" @if($nonacademic->leavebalance=="10") selected @endif>10</option>
-                        <option value = "11" @if($nonacademic->leavebalance=="11") selected @endif>11</option>
-                        <option value = "12" @if($nonacademic->leavebalance=="12") selected @endif>12</option>
-                        <option value = "13" @if($nonacademic->leavebalance=="13") selected @endif >13</option>
-                        <option value = "14" @if($nonacademic->leavebalance=="14") selected @endif>14</option>
-                        <option value = "15" @if($nonacademic->leavebalance=="15") selected @endif>15</option>
-                        <option value = "16" @if($nonacademic->leavebalance=="16") selected @endif>16</option>
-                        <option value = "17" @if($nonacademic->leavebalance=="17") selected @endif >17</option>
-                        <option value = "18" @if($nonacademic->leavebalance=="18") selected @endif>18</option>
-                        <option value = "19" @if($nonacademic->leavebalance=="19") selected @endif>19</option>
-                        <option value = "20" @if($nonacademic->leavebalance=="20") selected @endif>20</option>
-                        <option value = "21" @if($nonacademic->leavebalance=="21") selected @endif >21</option>
-                        <option value = "22" @if($nonacademic->leavebalance=="22") selected @endif>22</option>
-                        <option value = "23" @if($nonacademic->leavebalance=="23") selected @endif>23</option>
-                        <option value = "24" @if($nonacademic->leavebalance=="24") selected @endif>24</option>
-                        <option value = "25" @if($nonacademic->leavebalance=="25") selected @endif >25</option>
-                        <option value = "26" @if($nonacademic->leavebalance=="26") selected @endif>26</option>
-                        <option value = "27" @if($nonacademic->leavebalance=="27") selected @endif>27</option>
-                        <option value = "28" @if($nonacademic->leavebalance=="28") selected @endif>28</option>
-                        <option value = "29" @if($nonacademic->leavebalance=="29") selected @endif >29</option>
-                        <option value = "30" @if($nonacademic->leavebalance=="30") selected @endif>30</option>
-                        <option value = "31" @if($nonacademic->leavebalance=="31") selected @endif>31</option>
-                        <option value = "32" @if($nonacademic->leavebalance=="32") selected @endif>32</option>
-                        <option value = "33" @if($nonacademic->leavebalance=="33") selected @endif >33</option>
-                        <option value = "34" @if($nonacademic->leavebalance=="34") selected @endif>34</option>
-                        <option value = "35" @if($nonacademic->leavebalance=="35") selected @endif>35</option>
-                        <option value = "36" @if($nonacademic->leavebalance=="36") selected @endif>36</option>
-                        <option value = "37" @if($nonacademic->leavebalance=="37") selected @endif >37</option>
-                        <option value = "38" @if($nonacademic->leavebalance=="38") selected @endif>38</option>
-                        <option value = "39" @if($nonacademic->leavebalance=="39") selected @endif>39</option>
-                        <option value = "40" @if($nonacademic->leavebalance=="40") selected @endif>40</option>
-                        <option value = "41" @if($nonacademic->leavebalance=="41") selected @endif>41</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
                     <strong>Username:</strong>
                     <input type="text" name="username" value="{{ $nonacademic->username }}" class="form-control" placeholder="Enter a username">
                 </div>
@@ -240,5 +179,5 @@
         </div>
 
     </form>
-
+    </div>
 @endsection

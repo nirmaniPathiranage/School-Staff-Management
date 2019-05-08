@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Academic Staff Management</h2>
+                <h2><center><strong>Academic Staff Management</strong></center></h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('academics.create') }}"> Add New Academic Staff Member</a>
@@ -34,7 +34,6 @@
             <th>Qualifications</th>
             <th>Experience</th>
             <th>Department</th>
-            <th>Leave Balance in days</th>
             <th>Username</th>
             <th>Password</th>
             <th>Confirm Password</th>
@@ -58,7 +57,6 @@
                 <td>{{ $academic->qualifications }}</td>
                 <td>{{ $academic->experience }}</td>
                 <td>{{ $academic->department }}</td>
-                <td>{{ $academic->leavebalance }}</td>
                 <td>{{ $academic->username }}</td>
                 <td>{{ $academic->passsword }}</td>
                 <td>{{ $academic->confirmpassword }}</td>
@@ -80,7 +78,7 @@
             </tr>
         @endforeach
     </table>
-
+    </div>
     {!! $academics->links() !!}
 
 @endsection

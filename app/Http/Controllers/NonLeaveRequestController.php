@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\LeaveRequest;
+use App\NonLeaveRequest;
 use Illuminate\Http\Request;
 
-class LeaveRequestController extends Controller
+class NonLeaveRequestController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class LeaveRequestController extends Controller
      */
     public function index()
     {
-        $leaverequests = LeaveRequest::latest()->paginate(5);
+        $nonleaverequests = NonLeaveRequest::latest()->paginate(5);
 
-        return view('leaverequests.index',compact('leaverequests'))
+        return view('nonleaverequests.index',compact('nonleaverequests'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -27,7 +27,7 @@ class LeaveRequestController extends Controller
      */
     public function create()
     {
-        return view('leaverequests.create');
+        return view('nonleaverequests.create');
     }
 
     /**
@@ -40,7 +40,7 @@ class LeaveRequestController extends Controller
     {
         $input = request()->validate([
 
-            'staffid' => 'required|string|unique:leaverequests,staffid',
+            'staffid' => 'required|string|unique:nonleaverequests,staffid',
             'fullname' => 'required|string|min:2|max:255',
             'profession' => 'required',
             'department' => 'required',
@@ -53,42 +53,42 @@ class LeaveRequestController extends Controller
 
 
         $input = request()->all();
-        $leaverequest = LeaveRequest::create($input);
+        $nonleaverequest = NonLeaveRequest::create($input);
 
-        return redirect()->route('leaverequests.index')
+        return redirect()->route('nonleaverequests.index')
             ->with('success','Leave request submitted successfully!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\LeaveRequest  $leaveRequest
+     * @param  \App\NonLeaveRequest  $nonLeaveRequest
      * @return \Illuminate\Http\Response
      */
-    public function show(LeaveRequest $leaverequest)
+    public function show(NonLeaveRequest $nonleaverequest)
     {
-        return view('leaverequests.show',compact('leaverequest'));
+        return view('nonleaverequests.show',compact('nonleaverequest'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\LeaveRequest  $leaveRequest
+     * @param  \App\NonLeaveRequest  $nonLeaveRequest
      * @return \Illuminate\Http\Response
      */
-    public function edit(LeaveRequest $leaverequest)
+    public function edit(NonLeaveRequest $nonleaverequest)
     {
-        return view('leaverequests.edit',compact('leaverequest'));
+        return view('nonleaverequests.edit',compact('nonleaverequest'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\LeaveRequest  $leaveRequest
+     * @param  \App\NonLeaveRequest  $nonLeaveRequest
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, LeaveRequest $leaverequest)
+    public function update(Request $request, NonLeaveRequest $nonleaverequest)
     {
         request()->validate([
 
@@ -102,23 +102,23 @@ class LeaveRequestController extends Controller
             'reason' => 'required|string|max:255',
         ]);
 
-        $leaverequest->update($request->all());
+        $nonleaverequest->update($request->all());
 
-        return redirect()->route('leaverequests.index')
+        return redirect()->route('nonleaverequests.index')
             ->with('success','Leave Request details updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\LeaveRequest  $leaveRequest
+     * @param  \App\NonLeaveRequest  $nonLeaveRequest
      * @return \Illuminate\Http\Response
      */
-    public function destroy(LeaveRequest $leaverequest)
+    public function destroy(NonLeaveRequest $nonleaverequest)
     {
-        $leaverequest->delete();
+        $nonleaverequest->delete();
 
-        return redirect()->route('leaverequests.index')
+        return redirect()->route('nonleaverequests.index')
             ->with('success','Leave Request details deleted successfully');
     }
 }

@@ -34,7 +34,6 @@
             <th>Qualifications</th>
             <th>Experience</th>
             <th>Department</th>
-            <th>Leave Balance in days</th>
             <th>Username</th>
             <th>Password</th>
             <th>Confirm Password</th>
@@ -58,7 +57,6 @@
                 <td>{{ $nonacademic->qualifications }}</td>
                 <td>{{ $nonacademic->experience }}</td>
                 <td>{{ $nonacademic->department }}</td>
-                <td>{{ $nonacademic->leavebalance }}</td>
                 <td>{{ $nonacademic->username }}</td>
                 <td>{{ $nonacademic->passsword }}</td>
                 <td>{{ $nonacademic->confirmpassword }}</td>
@@ -80,7 +78,7 @@
             </tr>
         @endforeach
     </table>
-
+    </div>
     {!! $nonacademics->links() !!}
 
 @endsection

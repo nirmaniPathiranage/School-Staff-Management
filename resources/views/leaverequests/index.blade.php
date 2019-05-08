@@ -3,8 +3,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Leave Management</h2>
+            <div class="pull-middle">
+                <h2><center><strong>Leave Management</strong></center></strong></h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('leaverequests.create') }}"> Create New Leave Request</a>

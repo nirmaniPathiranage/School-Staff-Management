@@ -114,13 +114,6 @@
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Leave Balance:</strong>
-                {{ $nonacademic->leavebalance }}
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>Username:</strong>
                 {{ $nonacademic->username }}
             </div>
@@ -146,5 +139,6 @@
                 {{ $nonacademic->regdate }}
             </div>
         </div>
+    </div>
     </div>
 @endsection

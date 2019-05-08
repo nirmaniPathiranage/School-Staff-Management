@@ -4,30 +4,34 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12" style="background-color: #0e8033 ; height: 400px">
+            <div class="col-md-12" style="background-color: #0e8033 ; height: 450px">
                 {{--<img src="{{asset('images/event1.jpg')}}">--}}
                 <div class="col-md-12" style=" color: whitesmoke">
-
-                     <h1 class="text-center" style="padding: 10px">Academic Staff Management</h1>
+                     <h1 class="text-center" style="padding: 10px">Academic and Non-Academic Staff Management</h1>
                 </div>
+
+                <br><br><br><br>
                 
                 <div class="row container-fluid" style="padding-top: 0px;">
-                    <div class="col-md-3"   >
+
+
+                    <div class="col-md-4">
                         <div class="card">
                             <h5 class="card-header">
-                                Attendance
+                                Staff
                             </h5>
                             <div class="card-body">
                                 <p class="card-text">
-                                    <img src="{{asset('images/attendance.jpg')}}" style="width: 240px; height: 174px">
+                                    <img src="{{asset('images/staff.png')}}" style="width: 240px; height: 174px" >
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <button class="btn btn-outline-primary">Enter</button>
+                                <button type="button" class="btn-outline-primary" onclick="window.location='{{ route("academics.create") }}'"> Enter</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-md-4">
                         <div class="card">
                             <h5 class="card-header">
                                 Leave
@@ -42,7 +46,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-md-4">
                         <div class="card">
                             <h5 class="card-header">
                                 Salary
@@ -53,34 +58,15 @@
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <button class="btn btn-outline-primary">Enter</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <h5 class="card-header">
-                                Staff
-                            </h5>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    <img src="{{asset('images/staff.png')}}" style="width: 240px; height: 174px" >
-                                </p>
-                            </div>
-
-                            <div class="card-footer">
-                                <button type="button" class="btn-outline-primary" onclick="window.location='{{ route("academics.create") }}'"> Enter</button>
+                                <button type="button" class="btn-outline-primary" onclick="window.location='{{ route("academicsalaries.create") }}'"> Enter</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
-                <br>
-                <br>
+                <br><br><br>
             </div>
         </div>
     </div>
-
-
 
 @endsection

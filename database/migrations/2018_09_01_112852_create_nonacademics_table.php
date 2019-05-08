@@ -16,7 +16,7 @@ class CreateNonacademicsTable extends Migration
         Schema::create('nonacademics', function (Blueprint $table) {
 
             $table->string('staffid');
-            $table->integer('roleid');
+            $table->integer('roleid')->default('5');
             $table->string('fullname');
             $table->string('dob');
             $table->string('gender');
@@ -29,7 +29,6 @@ class CreateNonacademicsTable extends Migration
             $table->text('qualifications');
             $table->integer('experience');
             $table->string('department');
-            $table->integer('leavebalance');
             $table->string('username');
             $table->string('passsword');
             $table->string('confirmpassword');

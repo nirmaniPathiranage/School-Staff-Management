@@ -41,7 +41,6 @@ class NonAcademicController extends Controller
         $input = request()->validate([
 
             'staffid' => 'required|string|unique:nonacademics,staffid',
-            'roleid' => 'required',
             'fullname' => 'required|string|min:2|max:255',
             'dob' => 'required|date_format:Y-m-d|before:18 years ago',
             'gender' => 'required',
@@ -54,7 +53,6 @@ class NonAcademicController extends Controller
             'qualifications' => 'required|string|max:255',
             'experience' => 'required|numeric',
             'department' => 'required',
-            'leavebalance' => 'required',
             'username' => 'required|string|min:4|unique:nonacademics,username',
             'passsword' => 'required|string|min:6|unique:nonacademics,passsword',
             'confirmpassword' => 'required|same:passsword',
@@ -103,7 +101,6 @@ class NonAcademicController extends Controller
         request()->validate([
 
             'staffid' => 'required|string',
-            'roleid' => 'required',
             'fullname' => 'required|string|min:2|max:255',
             'dob' => 'required|date_format:Y-m-d|before:18 years ago',
             'gender' => 'required',
@@ -116,7 +113,6 @@ class NonAcademicController extends Controller
             'qualifications' => 'required|string|max:255',
             'experience' => 'required|numeric',
             'department' => 'required',
-            'leavebalance' => 'required',
             'username' => 'required|string|min:4',
             'passsword' => 'required|string|min:6',
             'confirmpassword' => 'required|same:passsword',

@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Show Academic Staff Member</h2>
+                <h2><center><strong>Show Academic Staff Member</strong></center></h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('academics.index') }}"> Back</a>
@@ -114,13 +114,6 @@
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Leave Balance:</strong>
-                {{ $academic->leavebalance }}
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>Username:</strong>
                 {{ $academic->username }}
             </div>
@@ -146,5 +139,6 @@
                 {{ $academic->regdate }}
             </div>
         </div>
+    </div>
     </div>
 @endsection

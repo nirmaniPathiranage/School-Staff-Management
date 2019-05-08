@@ -3,8 +3,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Leave Details</h2>
+            <div class="pull-middle">
+                <h2><center><strong>Edit Leave Details</strong></center></h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('leaverequests.index') }}"> Back</a>
@@ -77,7 +77,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Duration:</strong>
+                    <font color="blue"><h3><strong>Duration</strong></h3></font>
                 </div>
             </div>
 
